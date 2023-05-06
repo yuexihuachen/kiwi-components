@@ -1,9 +1,13 @@
 
+//const allPackages = fs.readdirSync(path.join(__dirname, '../packages'))
+
+
 const config = {
   stories: [
     "../src/**/*.mdx", 
     "../src/**/*.stories.@(js|jsx|ts|tsx)",
     "../packages/buttons/docs/*.stories.tsx",
+    "../packages/card/docs/*.stories.tsx",
   ],
   addons: [
     "@storybook/addon-links",

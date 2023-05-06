@@ -23,9 +23,3 @@ export const Basic = () => (
         <Button>Primary Large 1</Button>
     </DocsButtonGrid>
   )
-
-  export const Secondary: Story = {
-    args: {
-      label: 'Button',
-    },
-  };
