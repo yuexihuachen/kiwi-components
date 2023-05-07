@@ -12,6 +12,8 @@
     "@types/node": "^16.18.25",
     "@types/react": "^18.2.4",
     "@types/react-dom": "^18.2.3",
+    "gh-pages": "^5.0.0",
+    "lerna": "^6.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -19,12 +21,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "bootstrap": "lerna bootstrap",
+    "publish-component": "npm run build-storybook && gh-pages -a -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
@@ -67,5 +67,8 @@
     "prop-types": "^15.8.1",
     "storybook": "^7.0.8",
     "webpack": "^5.82.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
